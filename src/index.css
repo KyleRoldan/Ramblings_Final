@@ -1,0 +1,35 @@
+body{
+
+    background-color: rgba(255, 254, 242, 1);
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
+}
+
+button{
+
+    cursor: pointer;
+}
+
+.classic-button {
+    background-color:  #FFFEF2;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 15px;
+    font-weight:bold;
+    padding: 12px 24px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+
+.classic-button:hover {
+    background-color:  rgba(250, 78, 18, 1);
+    color:rgba(255, 254, 242, 1);
+    border: 1px solid rgba(250, 78, 18, 1);
+      }
+
+.link_styling{
+    text-decoration: none;
+    color: #fffef2;
+}

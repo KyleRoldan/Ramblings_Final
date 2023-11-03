@@ -1,0 +1,20 @@
+
+
+
+.body {
+    background-image: url('../../assets/backGround.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 1000px;
+    
+  }
+
+  .welcome-container{
+
+display: flex;
+justify-content: center;
+justify-content: space-between;
+padding:500px
+
+  }
+  

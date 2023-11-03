@@ -1,0 +1,32 @@
+
+.about-whole-box{
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+
+
+
+
+.about-box{
+width: 500px;
+height: 500px;
+border:2px black solid;
+box-shadow: 15px 15px rgba(250, 78, 18, 1);
+margin: 100px 100px 0px 50px;
+text-align: center;
+padding: 30px 60px 30px 60px;
+
+}
+
+
+.about-image-box{
+    width: 500px;
+    height: 800px;
+    border:2px solid black;
+    margin: 250px 100px ;
+    box-shadow: 15px 15px rgba(250, 78, 18, 1);
+
+}

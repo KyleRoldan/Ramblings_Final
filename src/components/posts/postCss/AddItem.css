@@ -1,0 +1,144 @@
+.addItemPage {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.add_item_whole-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px black solid;
+    width: 50%;
+    padding: 20px;
+    margin: 50px 30px 50px 550px;
+    box-shadow: 15px 15px rgba(250, 78, 18, 1);
+}
+
+.newTitle {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    background-color: rgba(255, 254, 242, 1);
+    letter-spacing: 2px;
+    border: 2px black solid;
+
+}
+
+.newPost {
+
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    background-color: rgba(255, 254, 242, 1);
+    letter-spacing: 1px;
+    resize: none;
+    border: 2px black solid;
+
+
+}
+
+.newPrice {
+    width: 10%;
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    background-color: rgba(255, 254, 242, 1);
+    letter-spacing: 1px;
+    resize: none;
+    border: 2px black solid;
+}
+
+.addSelect {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    background-color: rgba(255, 254, 242, 1);
+    letter-spacing: 1px;
+    resize: none;
+    border: 2px black solid;
+    text-decoration: none;
+}
+
+.newInput {
+
+    width: 50%;
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    background-color: rgba(255, 254, 242, 1);
+    letter-spacing: 1px;
+    resize: none;
+    border: 2px black solid;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+input[type=text]:focus {
+    outline: solid #000000;
+    border: 2px solid transparent;
+}
+
+input[type=email]:focus {
+    outline: solid #000000;
+    border: 2px solid transparent;
+}
+
+.form-Image {
+    display: flex;
+    margin: 4px;
+    position: relative;
+    width: 150px;
+    /* Set the width of your image container */
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    /* Position the overlay at the top */
+    right: 0;
+    /* Position the overlay at the right */
+    background: rgba(255, 254, 242, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    opacity: 0;
+    /* Initially, make the overlay invisible */
+    transition: opacity 0.3s;
+    /* Add a transition for a smooth fade-in effect */
+}
+
+.form-Image:hover .overlay {
+    opacity: 1;
+    /* When hovering over the image, make the overlay visible */
+}
+
+.newImageWhole {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+
+
+}
+
+/* .addImage-container_whole {
+
+    background-image: url("../../../assets/gridpaper.png");
+    margin: 50px 60px 0px 100px;
+    width: 800px;
+
+
+
+} */

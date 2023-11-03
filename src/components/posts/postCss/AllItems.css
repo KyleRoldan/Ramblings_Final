@@ -1,0 +1,212 @@
+/*//////////////////HOVER CARD OPTION//////////////////////////////////////*/
+
+.image-container_whole {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin:0px 0px 0px 50px;
+  padding: 30px 50px 50px 50px;
+
+}
+
+.image-container {
+  display: flex;
+
+  margin: 4px;
+  position: relative;
+  width: 300px;
+  /* Set the width of your image container */
+  overflow: hidden;
+
+}
+
+img {
+  width: 100%;
+  transition: filter .5s;
+  /* Add a transition for the blur effect */
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(229, 226, 226, 0.418);
+  /* Overlay background color and opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Start with the overlay hidden */
+  transition: opacity 0.5s;
+  /* Add a transition for the fade-in effect */
+  text-decoration: none;
+  text-align: center;
+  color: #fffef2;
+}
+
+.image-container:hover img {
+  filter: blur(5px);
+  /* Apply the blur effect on hover */
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+  /* Show the overlay on hover */
+}
+
+.searchSort-container {
+  display: flex;
+  /* border: 2px dotted black; */
+  justify-content: flex-start;
+  background: transparent;
+  width: 95%;
+  justify-self: center;
+  margin-top: 70px;
+
+}
+
+.magnifyglass:hover {
+  cursor: pointer;
+
+}
+.arrow:hover {
+  cursor: pointer;
+
+}
+
+.category-search-input {
+  border: black dotted 1px;
+
+}
+
+.title-search-input {
+  border: solid 1px black;
+  margin: 0px 20px 0px 20px;
+  padding: 2px;
+  box-shadow: 5px 5px black;
+  background: transparent;
+  text-align: center;
+
+}
+
+.sort-box {
+  background-color: #fffef2;
+}
+
+.category-search-input {
+  margin: 5px;
+  background-color: #fffef2;
+  width: 100px;
+  border-radius: 35px;
+  border: 2px solid black;
+  outline: 2px black black;
+  padding: 4px 4px;
+
+}
+
+
+.dropdown {
+  width: 20px;
+  
+  margin: 0px;
+  text-align: center;
+  /* box-shadow: 8px 8px #FA4E12 ; */
+
+}
+
+.dropdown-secondary {
+  width: 15px;
+  margin-top: 3px;
+  /* text-align: center; */
+
+}
+
+
+.dropdown-options {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.dropdown-option {
+
+  font-size:14px;
+  border: none;
+  background-color: transparent;
+  letter-spacing: 2px;
+}
+
+.dropdown-option:hover{
+
+  font-weight: bold;
+}
+
+
+.whole-container {
+  display: flex;
+  justify-content: center;
+  margin-left: 65px;
+  margin-top: 2px;
+}
+
+.favorite_header{
+margin:60px 0px 0px 103px;
+font-size: 38px;
+ border:2px black solid; 
+width:300px;
+text-align: center;
+ font-style: italic;  
+}
+
+
+
+
+
+
+
+
+/* ///ITEM CARD STYLLED IN RELATION TO WIREFRAME PROPOSAL////////////////////////////
+
+
+.item_body {
+    display: flex;
+  
+    margin: 0px 5px 0px 5px;
+
+} 
+
+.item_card {
+    display: flex;
+    flex-direction: column;
+    padding: 2px 3px;
+    margin: 8px;
+    border: solid 2px #FA4E12;
+    border-radius: 20px;
+    width: 300px;
+
+}
+
+.image_boxCard img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.image_DisplayCard {
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+.item_card_info {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 25px 75px 5px;
+
+}
+
+.item_card_price {
+padding:0px 0px 0px 185px
+
+
+} */

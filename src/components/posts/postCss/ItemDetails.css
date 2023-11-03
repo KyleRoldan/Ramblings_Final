@@ -1,0 +1,77 @@
+.imageBox{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 0 22px 0 30px;
+}
+
+.image_Display{
+    width:448px; 
+    margin: 48px 8px 24px 0;
+}  
+
+.imageBox_Extra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+    
+}
+
+.image_Display_Extra{
+margin: 0px 30px 24px 0;
+width: 640px;
+
+}
+
+.item-details-info-box{
+    padding: 0 22px 0 30px;
+}
+
+.item-description{
+    padding-bottom: 100px;
+}
+
+.opaque-text{
+    opacity: 50%;
+}
+
+.etsy_button{
+    background-color: transparent;
+border: none;
+}
+
+.etsy_logo{
+    width:50px;
+
+   
+}
+
+.item-details-etsy{
+display: flex;
+
+}
+
+.buying-favorite-box{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1140px;
+    
+}
+
+.favoritetab{
+margin-left: 15px;
+    width: 63px;
+    background-color: transparent;
+    border: none;
+    
+    
+
+
+
+}
+
