@@ -12,9 +12,17 @@
   .welcome-container{
 
 display: flex;
+
 justify-content: center;
 justify-content: space-between;
 padding:500px
 
+  }
+
+  .welcome-container-text{
+    margin-top: 50px;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
   }
   

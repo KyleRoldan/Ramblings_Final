@@ -10,13 +10,16 @@ export const Welcome = () => {
         <div className="body">
             <div className="welcome-container">
 
+            <div className="welcome-container-text">
+
 
             <Link className='link-tag' to="/items">
             <button className="classic-button">
-            H
-            o
-            m
+            E
+            n
+            t
             e
+            r
             </button>
             </Link>
 
@@ -51,7 +54,7 @@ export const Welcome = () => {
 
 
 
-
+</div>
             </div>
         </div>
     </>)

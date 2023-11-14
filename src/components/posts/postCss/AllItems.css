@@ -4,8 +4,10 @@
 
   display: flex;
   flex-wrap: wrap;
-  margin:0px 0px 0px 50px;
-  padding: 30px 50px 50px 50px;
+  margin: 0px 0px 0px 60px;
+  padding: 30px 20px 50px 30px;
+  width: 100%;
+  
 
 }
 
@@ -14,7 +16,7 @@
 
   margin: 4px;
   position: relative;
-  width: 300px;
+  width: 308px;
   /* Set the width of your image container */
   overflow: hidden;
 
@@ -62,7 +64,7 @@ img {
   background: transparent;
   width: 95%;
   justify-self: center;
-  margin-top: 70px;
+  margin-top: 60px;
 
 }
 
@@ -70,6 +72,7 @@ img {
   cursor: pointer;
 
 }
+
 .arrow:hover {
   cursor: pointer;
 
@@ -108,7 +111,7 @@ img {
 
 .dropdown {
   width: 20px;
-  
+
   margin: 0px;
   text-align: center;
   /* box-shadow: 8px 8px #FA4E12 ; */
@@ -131,13 +134,13 @@ img {
 
 .dropdown-option {
 
-  font-size:14px;
+  font-size: 14px;
   border: none;
   background-color: transparent;
   letter-spacing: 2px;
 }
 
-.dropdown-option:hover{
+.dropdown-option:hover {
 
   font-weight: bold;
 }
@@ -150,15 +153,23 @@ img {
   margin-top: 2px;
 }
 
-.favorite_header{
-margin:60px 0px 0px 103px;
-font-size: 38px;
- border:2px black solid; 
-width:300px;
-text-align: center;
- font-style: italic;  
+.favorite_header {
+  margin: 60px 0px 0px 103px;
+  font-size: 38px;
+  border: 2px black solid;
+  box-shadow:black 8px 8px ;
+  width: 300px;
+  text-align: center;
+  font-style: italic;
 }
 
+.newInput {
+  transition: transform 0.3s ease-in-out;
+}
+
+.newInput:hover {
+  transform: scale(1.2); 
+}
 
 
 
@@ -167,15 +178,11 @@ text-align: center;
 
 
 /* ///ITEM CARD STYLLED IN RELATION TO WIREFRAME PROPOSAL////////////////////////////
-
-
 .item_body {
     display: flex;
   
     margin: 0px 5px 0px 5px;
-
 } 
-
 .item_card {
     display: flex;
     flex-direction: column;
@@ -184,29 +191,19 @@ text-align: center;
     border: solid 2px #FA4E12;
     border-radius: 20px;
     width: 300px;
-
 }
-
 .image_boxCard img {
     max-width: 100%;
     max-height: 100%;
-
 }
-
 .image_DisplayCard {
     border-radius: 20px 20px 20px 20px;
-
 }
-
 .item_card_info {
     display: flex;
     flex-direction: column;
     margin: 25px 25px 75px 5px;
-
 }
-
 .item_card_price {
 padding:0px 0px 0px 185px
-
-
 } */

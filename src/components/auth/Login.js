@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { getUserByEmail } from "../../services/UserService"
+import navLogoImage from "../../assets/ramblingsvintagelogo.png"
 
 export const Login = () => {
   const [email, set] = useState("")
@@ -32,41 +33,53 @@ export const Login = () => {
   }
 
   return (
-    <div className="auth-container">
+    <div className="background-container">
 
-      <div className="log-in-text">Log-in</div>
+     
+        <img className="login-logo" src={navLogoImage} alt ="logo"/>
       
-      <div className= "secondary-conatiner">
-        <form className="auth-form" onSubmit={handleLogin}>
-          
-          <div className="auth-box">
-            <div className="auth-fieldset">
-              <input
-                type="email"
-                value={email}
-                className="auth-form-input"
-                onChange={(evt) => set(evt.target.value)}
-                placeholder="Email address"
-                required
-                autoFocus
-              />
-            </div>
-          </div>
-           
-           <div className="auth-fieldset">
-            <div>
-              <button class="classic-button" type="submit">Sign In</button>
-            </div>
-          </div>
-        
-        </form>
-      </div>
-      <div className="newUser-box">New user?</div>
-      
-      <div className="register-link">
-        <Link to="/register"><button class="classic-button" type="submit">Join Now</button></Link>
-      </div>
 
+
+        <div className="auth-container">
+
+{/* <div className="log-in-text">Log in</div> */}
+
+<div className= "secondary-conatiner">
+  <form className="auth-form" onSubmit={handleLogin}>
+
+    <div className="auth-box">
+      <div className="auth-fieldset">
+        <input
+          type="email"
+          value={email}
+          className="auth-form-input"
+          onChange={(evt) => set(evt.target.value)}
+          placeholder="Email address"
+          required
+          autoFocus
+        />
+      </div>
+    </div>
+
+     <div className="auth-fieldset">
+      <div>
+        <button className="classic-button-login" type="submit">Sign In</button>
+      </div>
+    </div>
+
+  </form>
+
+{/* <div className="newUser-box">New user?</div> */}
+
+<div className="register-link">
+  <Link to="/register"><button className="classic-button-login" type="submit">Join Now</button></Link>
+</div>
+
+</div>
+
+
+   
+    </div>
     </div>
   )
 }

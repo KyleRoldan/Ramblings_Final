@@ -93,22 +93,21 @@ export const AllItems = ({ currentUser }) => {
     return <>
 
 
-<div className="whole-container">
+        <div className="whole-container">
 
-        <div className="searchSort-container">
-            {/* <div className="search-Box">
+            <div className="searchSort-container">
+                {/* <div className="search-Box">
                 <input
                     onChange={(event) => { setSearchTerm(event.target.value) }}
                     type="text"
                     // placeholder="search title"
                     className="title-search-input"
                 />
-
             </div> */}
 
 
 
-            {/* <div className="sort-box">
+                {/* <div className="sort-box">
                 <select
                     className="category-search-input"
                     value={selectedCategory}
@@ -122,26 +121,26 @@ export const AllItems = ({ currentUser }) => {
                     ))}
                 </select>
             </div> */}
-            <div
-                className="dropdown"
-                src={magnifyglass}
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)} // You'll need a state variable like isDropdownOpen to control the dropdown's visibility
-            >
-                 <img className= "magnifyglass" src={magnifyglass} alt="search button" />
-            </div>
+                <div
+                    className="dropdown"
+                    src={magnifyglass}
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)} // You'll need a state variable like isDropdownOpen to control the dropdown's visibility
+                >
+                    <img className="magnifyglass" src={magnifyglass} alt="search button" />
+                </div>
 
-            {isDropdownOpen && (
-                <div className="dropdown-options">
+                {isDropdownOpen && (
+                    <div className="dropdown-options">
 
-                    <input
-                        onChange={(event) => { setSearchTerm(event.target.value) }}
-                        type="text"
-                        // placeholder="search title"
-                        className="title-search-input"
-                    />
+                        <input
+                            onChange={(event) => { setSearchTerm(event.target.value) }}
+                            type="text"
+                            // placeholder="search title"
+                            className="title-search-input"
+                        />
 
 
-{/* <div className="sort-box">
+                        {/* <div className="sort-box">
                 <select
                     className="category-search-input"
                     value={selectedCategory}
@@ -156,28 +155,36 @@ export const AllItems = ({ currentUser }) => {
                 </select>
             </div>  */}
 
-                    <div
-                        
-                        className="dropdown-secondary"
-                        onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}
-                    ><img className= "arrow" src={isDropdownOpenSecondary ? unSort : sort} alt="arrow" /></div>
-                    {isDropdownOpenSecondary && (
-                    <div>
-                    {allCategories.map((itemOption) => (
+                        <div className="dropdown-secondary" onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}>
+                            <img className="arrow" src={isDropdownOpenSecondary ? unSort : sort} alt="arrow" />
+                        </div>
+                        {isDropdownOpenSecondary && (
+                            <div>
+                                {/* Add an option for "All" category */}
+                                <button
+                                    className="dropdown-option"
+                                    key="allCategory"
+                                    value="All"
+                                    onClick={() => setSelectedCategory("All")}
+                                >
+                                    All
+                                </button>
 
-                        <button
-                            className="dropdown-option"
-                            key={itemOption.id}
-                            value={itemOption.id}
-                            onClick={(event) => setSelectedCategory(parseInt(event.target.value))}
-                        >
-                            {itemOption.name}
-                        </button>                  
-                    ))}
-                </div>
-                    )}
-                </div>
-            )}
+                                {allCategories.map((itemOption) => (
+                                    <button
+                                        className="dropdown-option"
+                                        key={itemOption.id}
+                                        value={itemOption.id}
+                                        onClick={(event) => setSelectedCategory(parseInt(event.target.value))}
+                                    >
+                                        {itemOption.name}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+
+                    </div>
+                )}
 
 
 
@@ -186,10 +193,10 @@ export const AllItems = ({ currentUser }) => {
 
 
 
+
+            </div>
 
         </div>
-
-    </div>
 
 
 
@@ -219,21 +226,16 @@ export const AllItems = ({ currentUser }) => {
         {/* ////////////ItEM CARD STYLED IN RELATION TO CAPSTONE WIREFRAM//////////////////////////////*/}
 
         {/* <div className="item_body">
-
             {filteredItems.map((item) => (
                 <div className="item_card" key={item.id}>
                     <div className="image_boxCard">
                         <img src={testImg} alt="item detail" className="image_DisplayCard" />
                     </div>
-
                     <div className="item_card_info">
                         <h3><Link to={`/items/${item.id}`}>{item.title}</Link></h3>
                         {categoryForItem[item.id]?.map(category => category.name)}
                     </div>
-
                     <h1><div className="item_card_price"> {item.price}</div></h1>
-
-
                 </div>
             ))} */}
 
@@ -241,5 +243,3 @@ export const AllItems = ({ currentUser }) => {
 
     </>
 }
-
-

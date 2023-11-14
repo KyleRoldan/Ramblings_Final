@@ -13,7 +13,7 @@ export const UserNavBar = ({currentUser}) => {
   const navigate = useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [allUsers, setAllUsers] = useState([]);
-  
+
   useEffect(() => {
     getAllUsers().then((usersArray) => {
       setAllUsers(usersArray);
@@ -25,8 +25,8 @@ export const UserNavBar = ({currentUser}) => {
   };
 
   const handleServiceClick = () => {
-    
-    
+
+
     // Optionally, you can close the dropdown by setting isDropdownOpen to false
     setIsDropdownOpen(false);
   };
@@ -38,14 +38,15 @@ export const UserNavBar = ({currentUser}) => {
 
   return (
     <div className="navbar">
-        
-        <div className="userSection">
+
+<div className="userSection">
             <div className="userProfilePic-box">
-                <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/>
+                {/* <img className="userProfilePic" alt="User Profile Pic" src={navIconImage}/> */}
+                Hey,
             </div>
         <div className="userBox"> {userEmail} </div>
        </div>
-       
+
        <div className="logoBox">
         <img className= "nav-logo" src={navLogoImage} alt="Dropdown Button" />
        </div>
@@ -57,22 +58,43 @@ export const UserNavBar = ({currentUser}) => {
         {isDropdownOpen && (
           <div className="dropdown-content">
 
-            <Link to="/items">
-            <div className="dropdown-item" onClick={() => handleServiceClick(1)}>Home</div>
+            <Link className='link-tag' to="/items">
+            <div className="dropdown-item" onClick={() => handleServiceClick(1)}>
+            H
+            o
+            m
+            e
+            </div>
             </Link>
 
-            <Link to="/favorites">
-            <div className="dropdown-item" onClick={() => handleServiceClick(2)}>Favorites</div>
+            <Link className='link-tag' to="/favorites">
+            <div className="dropdown-item" onClick={() => handleServiceClick(2)}>
+            F
+            a
+            v
+            o
+            r
+            i
+            t
+            e
+            s
+            </div>
             </Link>
 
-            <Link to="/lists">
-            <div className="dropdown-item" onClick={() => handleServiceClick(3)}>Curated List</div>
-            </Link>
+             <Link className='link-tag' to="/about">
+            <div className="dropdown-item" onClick={() => handleServiceClick(3)}>
+              A
+              b
+              o
+              u
+              t
+              </div>
+            </Link> 
 
 
 {localStorage.getItem("ramblings_user") ? (
     <Link
-      className="navbar-link"
+      className="link-tag"
       to=""
       onClick={() => {
         localStorage.removeItem("ramblings_user")
@@ -80,7 +102,12 @@ export const UserNavBar = ({currentUser}) => {
       }}
     >
       <div className="dropdown-item">
-      Logout
+      L
+      o
+      g
+      o
+      u
+      t
       </div>
     </Link>
 ) : (
@@ -94,5 +121,3 @@ export const UserNavBar = ({currentUser}) => {
     </div>
   );
 }
-
-

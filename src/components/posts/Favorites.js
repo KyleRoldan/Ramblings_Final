@@ -207,23 +207,32 @@ export const Favorites = ({currentUser}) => {
 
                     <div
                         
-                        className="dropdown-secondary"
-                        onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}
-                    ><img className= "arrow" src={isDropdownOpenSecondary ? unSort : sort} alt="arrow" /></div>
-                    {isDropdownOpenSecondary && (
-                    <div>
-                    {allCategories.map((itemOption) => (
+                         className="dropdown-secondary" onClick={() => setIsDropdownOpenSecondary(!isDropdownOpenSecondary)}>
+                            <img className="arrow" src={isDropdownOpenSecondary ? unSort : sort} alt="arrow" />
+                        </div>
+                        {isDropdownOpenSecondary && (
+                            <div>
+                                {/* Add an option for "All" category */}
+                                <button
+                                    className="dropdown-option"
+                                    key="allCategory"
+                                    value="All"
+                                    onClick={() => setSelectedCategory("All")}
+                                >
+                                    All
+                                </button>
 
-                        <button
-                            className="dropdown-option"
-                            key={itemOption.id}
-                            value={itemOption.id}
-                            onClick={(event) => setSelectedCategory(parseInt(event.target.value))}
-                        >
-                            {itemOption.name}
-                        </button>
-                    ))}
-                </div>
+                                {allCategories.map((itemOption) => (
+                                    <button
+                                        className="dropdown-option"
+                                        key={itemOption.id}
+                                        value={itemOption.id}
+                                        onClick={(event) => setSelectedCategory(parseInt(event.target.value))}
+                                    >
+                                        {itemOption.name}
+                                    </button>
+                                ))}
+                            </div>
                     )}
                 </div>
             

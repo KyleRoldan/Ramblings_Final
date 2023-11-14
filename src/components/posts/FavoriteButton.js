@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { deleteFavorite, getFavoriteRelationship } from '../../services/FetchCalls';
+import favoritetab from "../../assets/favoritetab.png"
+import favoritetabfilled from "../../assets/favoritetabfilled.png"
 
 
 export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
   const [alreadyFavorited, setAlreadyFavorited] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
-  const [test,setTest] = useState([])
-  
+  const [test, setTest] = useState([])
+
 
 
 
@@ -29,8 +31,8 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
       });
   }, [itemId, userId, alreadyFavorited.length]);
 
-  
-  
+
+
 
   const handleFavorite = () => {
     fetch("http://localhost:8088/favorite", {
@@ -51,21 +53,22 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
   };
 
 
-    const handleUnfavorite = () => {
-      deleteFavorite(test[0].id)
-      setIsFavorite(false)
+  const handleUnfavorite = () => {
+    deleteFavorite(test[0].id)
+    setIsFavorite(false)
   };
 
 
   return (
     <div>
       {isFavorite ? (
-        <button className="classic-button" onClick={handleUnfavorite}>
-          Unlike
+        <button className="favoritetab" onClick={handleUnfavorite}>
+          <img className="" src={favoritetabfilled} alt="favorite Button" />
+
         </button>
       ) : (
-        <button className="classic-button" onClick={handleFavorite}>
-          Favorite
+        <button className="favoritetab" onClick={handleFavorite}>
+          <img className="" src={favoritetab} alt="favorite Button" />
         </button>
       )}
     </div>

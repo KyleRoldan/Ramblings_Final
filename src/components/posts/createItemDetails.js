@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getAllCategories, getAllUsers, getAllFavorites, getAllItems, assignLike, updateLike, getFavoritedItems, deleteLike } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
 import { FavoriteButton } from "./FavoriteButton";
+import etsyButton from "../../assets/EtsyLogo.png"
 
 
 
@@ -17,8 +18,8 @@ export const CreateItemDetails = ({ item, currentUser }) => {
   const [likeCount, setLikeCount] = useState([])
   const [allFavoriteItems, setAllFavoriteItems] = useState({})
   const [isFavorite, setIsFavorite] = useState(false);
-  
-  
+
+
   const userId = currentUser.id
   const itemId = item.id
 
@@ -34,14 +35,14 @@ export const CreateItemDetails = ({ item, currentUser }) => {
     });
   }, []);
 
-  
+
 
   useEffect(() => {
     getAllFavorites().then((favArray) => {
       setAllFavorites(favArray);
     });
   }, []);
-  
+
 
   useEffect(() => {
     getFavoritedItems().then((favItemArray) => {
@@ -65,20 +66,20 @@ export const CreateItemDetails = ({ item, currentUser }) => {
   //   setLikeCount(postLikeCounts)
   // }, [allFavorites, allItems, item.id])
 
-  
+
   const itemCategory = allCategories
     .filter(category => category.id === item.categoryId)
     .map(topic => topic.name);
 
-  
-  
+
+
     const handleFavoriteChange = (updatedIsFavorite) => {
-    
+
           setIsFavorite(updatedIsFavorite);
-      
+
         };
-    
-      
+
+
 
 
 
@@ -112,13 +113,13 @@ export const CreateItemDetails = ({ item, currentUser }) => {
       <div className="item-details-info-box">
 
         <div className = "item-details-etsy">
-          
-          
+
+
           <h1>${item.price}</h1>
 
         <div className="buying-favorite-box">
   <a href="https://www.etsy.com/shop/ramblingsvintageshop" target="_blank" rel="noreferrer" className="etsy_button">
-    <img className="etsy_logo" src="" alt="Etsy Button" />
+    <img className="etsy_logo" src={etsyButton} alt="Etsy Button" />
   </a>
 
 
@@ -128,7 +129,25 @@ export const CreateItemDetails = ({ item, currentUser }) => {
          isFavorite={isFavorite}
         onFavoriteChange={handleFavoriteChange}
         />
-      </div>
+        </div>
+
+        </div>
+
+
+        <h1>{item.title}</h1>
+        <p className="opaque-text">{itemCategory}</p>
+        <p className="item-description">{item.description}</p>
+        <div> 
+
+        <div className="imageBox_Extra">
+  {item.images[4] && (
+    <img src={item.images[1]} alt="no upload yet" className="image_Display_Extra" />
+  )}
+  {item.images[5] && (
+    <img src={item.images[2]} alt="no upload yet" className="image_Display_Extra" />
+  )}
+</div>
+
 
 
 {/* /////////Display a Like Count ///////////////////////////////////////////////////////// */}
@@ -146,6 +165,3 @@ export const CreateItemDetails = ({ item, currentUser }) => {
     </div>
   );
 };
-
-
-

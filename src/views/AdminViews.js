@@ -18,10 +18,9 @@ export const AdminViews = ({currentUser}) => {
 
 return (
 
-<>
-
-<Routes>
-  <Route path="/"
+<><Routes>
+  <Route index element={<Welcome currentUser={currentUser}/>} />
+  <Route path="/" 
 
 element={
 <>
@@ -44,8 +43,8 @@ element={
 
 </Route>
   </Routes>
-  
-  
+
+
   </>
 
 

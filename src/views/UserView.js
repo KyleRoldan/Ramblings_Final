@@ -21,19 +21,19 @@ element={
 </>
 }
 >
-<Route index element={<Welcome />} />
+{/* <Route index element={<Welcome />} /> */}
 <Route path ="items" index element={<AllItems currentUser={currentUser} />} />
 <Route path="/items/:itemId" element={<ItemDetails currentUser={currentUser} />} />
 <Route path="favorites" element={<Favorites currentUser={currentUser} />} />
-{/* <Route path ="lists" index element={<AllLists currentUser={currentUser}/>} /> */}
+<Route path ="about" index element={<About currentUser={currentUser}/>} />
 
 
 
 
 </Route>
   </Routes>
-  
-  
+
+
   </>
 
 

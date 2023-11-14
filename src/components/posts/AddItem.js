@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { getAllCategories, getAllItems, submitNewItem, } from "../../services/FetchCalls"
 import { Link } from "react-router-dom"
-import "./postCss/AddItem.css";
+import "./postCss/AddItem.css"
+
 
 
 
@@ -93,10 +94,17 @@ export const AddItem = ({ currentUser }) => {
   };
 
 
-  return(
+  return (<>
+
+<div className="editBox">Add Item</div>
+<div className="addItemPage">
 
 
-    <div>
+
+
+    <div className="add_item_whole-container">
+
+
 
       <h1>Title</h1>
       <input
@@ -123,13 +131,12 @@ export const AddItem = ({ currentUser }) => {
         className="newPrice"
         placeholder="Add Price"
         type="text"
-        value={inputPrice}
+        value={inputPrice} 
         onChange={handlePriceChange}
       />
-
-
-
+       <h1>Category</h1>
       <select
+        className="addSelect"
         value={searchTerm}
         onChange={handleCategoryChange}>
         <option>Select an Category</option>
@@ -141,7 +148,7 @@ export const AddItem = ({ currentUser }) => {
         ))}
       </select>
 
-      <h1>New Inputs</h1>
+      <h1>Images</h1>
 
       <div className="newImage">
         <input
@@ -153,18 +160,58 @@ export const AddItem = ({ currentUser }) => {
         />
         <button className="classic-button" onClick={addNewInput}>Add New Image</button>
 
-        {newInputs.map((input, index) => (
-          <div key={index}>
-            <img className="form-Image" alt="input" src={input} />
-            <button className="classic-button" onClick={() => removeNewInput(index)}>Remove</button>
+        <div className="newImageWhole">
+          {newInputs.map((input, index) => (
+            <div key={index} className="form-Image">
+              <img className="image" src={input} alt="input" />
+              <div className="overlay">
+                <button className="overlay-button" onClick={() => removeNewInput(index)}>
+                  Remove
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
+
+      </div>
+
+      <Link to={`/items`}><button className="classic-button" onClick={() => {
+        handleItemSave()
+
+
+
+      }}>ADD</button></Link>
+
+
+
+
+
+
+    </div>
+
+
+
+    {/* <div className="addImage-container_whole">
+        {allItems.map((item) => (
+          <div className="addImage-container" key={item.id}>
+            <ul>
+              <li>
+              <Link to={`/items/${item.id}`}>{item.title}</Link>
+              </li>
+            </ul>
+           
           </div>
         ))}
+      </div> */}
 
-        <h1>Add Item to Listings</h1>
-        <Link to={`/items`}><button className="classic-button" onClick={() => {
-          handleItemSave()
-        }}>ADD</button></Link>
-      </div>
-      </div>
-    )
-    }
+
+
+
+
+
+</div>
+  </>
+  )
+}

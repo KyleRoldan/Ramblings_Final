@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { createUser, getUserByEmail } from "../../services/UserService"
+import navLogoImage from "../../assets/ramblingsvintagelogo.png"
 
 export const Register = (props) => {
   const [user, setUser] = useState({
@@ -53,11 +54,12 @@ export const Register = (props) => {
   }
 
   return (
-  
+    <div className="background-container">
+      <img className="login-logo" src={navLogoImage} alt ="logo"/>
   
   <div className="auth-container">
 
-  <div className="log-in-text">Join</div>
+  {/* <div className="log-in-text">Join</div> */}
   
   <div className= "secondary-conatiner">
     <form className="auth-form" onSubmit={handleRegister}>
@@ -68,7 +70,7 @@ export const Register = (props) => {
               onChange={updateUser}
               type="text"
               id="fullName"
-              className="auth-form-input"
+              className="auth-form-register-input"
               placeholder="Enter your name"
               required
               autoFocus
@@ -82,16 +84,16 @@ export const Register = (props) => {
               onChange={updateUser}
               type="email"
               id="email"
-              className="auth-form-input"
+              className="auth-form-register-input"
               placeholder="Email address"
               required
             />
         </div>
       </div>
-      <div className="newUser-box"></div>
+      <div></div>
 
       <div className="register-link">
-        <button class="classic-button" type="submit">Register</button>
+        <button class="classic-button-login" type="submit">Join</button>
      </div>
 
 
@@ -104,7 +106,7 @@ export const Register = (props) => {
 
 </div>
 
-
+</div>
 
 
 //     <main className="auth-container">
