@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { getAllCategories } from "../../services/FetchCalls"
 import "../posts/postCss/AddItem.css"
 import addImage from "../../assets/addImage.png"
@@ -9,8 +9,8 @@ import addImage from "../../assets/addImage.png"
 export const EditItem = () => {
     const [searchTerm, setSearchTerm] = useState({})
     const [allCategories, setAllCategories] = useState([])
-    const [newInput, setNewInput] = useState(""); // New input field
-    const [newInputs, setNewInputs] = useState([]); // Array to store new inputs
+    // const [newInput, setNewInput] = useState(""); // New input field
+    // const [newInputs, setNewInputs] = useState([]); // Array to store new inputs
     const [ticket, assignTicket] = useState({
         title: "",
         description: "",
@@ -57,18 +57,18 @@ export const EditItem = () => {
 
 
 
-    // Add a new input to the array
-    const addEditInput = () => {
-        setNewInputs([...newInputs, newInput]);
-        setNewInput(""); // Clear the input field after adding
-    };
+    // // Add a new input to the array
+    // const addEditInput = () => {
+    //     setNewInputs([...newInputs, newInput]);
+    //     setNewInput(""); // Clear the input field after adding
+    // };
 
-    // Remove an input from the array
-    const removeEditInput = (index) => {
-        const updatedInputs = [...newInputs];
-        updatedInputs.splice(index, 1);
-        setNewInputs(updatedInputs);
-    };
+    // // Remove an input from the array
+    // const removeEditInput = (index) => {
+    //     const updatedInputs = [...newInputs];
+    //     updatedInputs.splice(index, 1);
+    //     setNewInputs(updatedInputs);
+    // };
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
