@@ -98,13 +98,6 @@ export const EditItem = () => {
 
 
 
-
-
-               
-
-
-
-
                 <h2>Title</h2>
                 <textarea
                     required autoFocus

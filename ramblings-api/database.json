@@ -23,7 +23,7 @@
     {
       "id": 3,
       "categoryId": "7",
-      "title": "Vintage Madewell Flannel shirt sz XL",
+      "title": "Madewell Flannel shirt sz XL",
       "description": "please message if you have any questions regarding size or condition\n* has been cropped",
       "measurements": {},
       "price": "125",
@@ -36,20 +36,6 @@
         "https://i.etsystatic.com/16189360/r/il/80cc13/4888082788/il_fullxfull.4888082788_g4qz.jpg",
         "https://i.etsystatic.com/16189360/r/il/733b73/4936370451/il_fullxfull.4936370451_mtah.jpg",
         "https://i.etsystatic.com/16189360/r/il/eeb99f/4888087544/il_fullxfull.4888087544_murl.jpg"
-      ]
-    },
-    {
-      "id": 4,
-      "categoryId": 13,
-      "title": "2 X Vintage 80s Banner 1985 St. Louis Cardinals MLB",
-      "description": "please message if you have any questions regarding size or condition\ntwo different variations, sold as a set. both in great condition.",
-      "measurements": {},
-      "price": 35,
-      "currency": "USD",
-      "quantity": 1,
-      "images": [
-        "https://i.etsystatic.com/16189360/r/il/df7442/4888052920/il_fullxfull.4888052920_qyhq.jpg",
-        "https://i.etsystatic.com/16189360/r/il/df7442/4888052920/il_fullxfull.4888052920_qyhq.jpg"
       ]
     },
     {
@@ -524,6 +510,11 @@
       "itemId": 11,
       "userId": 2,
       "id": 24
+    },
+    {
+      "itemId": 3,
+      "userId": 2,
+      "id": 25
     }
   ],
   "user_list_item": [
