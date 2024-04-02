@@ -19,7 +19,7 @@ export const Favorites = ({currentUser}) => {
     const [allItems, setAllItems] = useState([])
     const [allFavorites, setAllFavorites] = useState([])
     const [allCategories, setAllCategories] = useState([])
-    const [categoryForItem, setCategoryForItem] = useState({})
+    const [, setCategoryForItem] = useState({})
     const [searchTerm, setSearchTerm] = useState("")
     const [filteredItems, setFilteredItems] = useState([])
     const [selectedCategory, setSelectedCategory] = useState(0);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAllCategories, getAllUsers, getAllFavorites, getAllItems, assignLike, updateLike, getFavoritedItems, deleteLike } from "../../services/FetchCalls";
+import { getAllCategories, getAllFavorites, getAllItems, getFavoritedItems} from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
 import { FavoriteButton } from "./FavoriteButton";
 import etsyButton from "../../assets/EtsyLogo.png"
@@ -12,11 +12,11 @@ import etsyButton from "../../assets/EtsyLogo.png"
 
 
 export const CreateItemDetails = ({ item, currentUser }) => {
-  const [allItems, setAllItems] = useState([]);
+  const [, setAllItems] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
-  const [allFavorites, setAllFavorites] = useState([])
-  const [likeCount, setLikeCount] = useState([])
-  const [allFavoriteItems, setAllFavoriteItems] = useState({})
+  const [, setAllFavorites] = useState([])
+  // const [likeCount, setLikeCount] = useState([])
+  const [, setAllFavoriteItems] = useState({})
   const [isFavorite, setIsFavorite] = useState(false);
 
 

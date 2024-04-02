@@ -1,15 +1,15 @@
 import React, { useState, useEffect, } from "react";
-import { getAllCategories, favoriteItem, getAllFavorites, deleteItem, getAllItems } from "../../services/FetchCalls";
+import { getAllCategories, deleteItem, getAllItems } from "../../services/FetchCalls";
 import "./postCss/ItemDetails.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 
 export const AdminItemDetails = ({ item, currentUser }) => {
-  const navigate = useNavigate;
+  // const navigate = useNavigate;
 
-  const [allItems, setAllItems] = useState([])
-  const [isfavorited, setIsfavorited] = useState(false);
+  const [, setAllItems] = useState([])
+  // const [isfavorited, setIsfavorited] = useState(false);
   const [allCategories, setAllCategories] = useState([]);
 
 

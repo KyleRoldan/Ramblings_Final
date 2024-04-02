@@ -17,7 +17,7 @@ export const FavoriteButton = ({ itemId, userId, onFavoriteChange }) => {
     getFavoriteRelationship(itemId, userId).then((itemArray) => {
       setTest(itemArray);
     });
-  }, []);
+  }, [itemId, userId]);
 
   useEffect(() => {
     // You can use an API call here to check if the item is already favorited by the user
