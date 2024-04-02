@@ -8,7 +8,7 @@ import "./postCss/AddItem.css"
 
 
 export const AddItem = ({ currentUser }) => {
-  const [allItems, setAllItems] = useState([])
+  const [, setAllItems] = useState([])
   const [inputTitle, setInputTitle] = useState("")
   const [inputDescription, setInputDescription] = useState("")
   const [itemData, setItemData] = useState({});
